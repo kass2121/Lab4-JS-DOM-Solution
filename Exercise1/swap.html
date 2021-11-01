@@ -1,0 +1,34 @@
+<!-- 
+    ## Exercise 01
+1. Create a `swap.html` page which has 2 pictures and 1 button on it.
+2. You can use any picture you want (See two samples attached).
+3. Add a button named `Swap`.
+4. When you click the `Swap` button, the location of two pictures are swapped.
+ --> 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Exercise 01 Swap </title>
+ </head>
+ <body>
+    <img id="firstImage" src="1.jpeg" alt="Dog-1" /><br>
+    <img id="secondImage" src="2.jpeg" alt="Dog-2" />
+    <br />
+    <button id="swap">Swap</button>
+    <script>
+        window.onload = function() {
+            document.getElementById('swap').onclick = function() {
+                let firstImage = document.getElementById("firstImage");
+                let secondImage = document.getElementById("secondImage");
+                let pos = firstImage.src;
+                firstImage.src = secondImage.src;
+                secondImage.src = pos;
+            }
+        }
+        </script>
+ </body>
+ 
+ </html>
